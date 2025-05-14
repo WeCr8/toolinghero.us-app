@@ -10,6 +10,6 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 defineProps(['fields', 'unit', 'model'])
 </script>
