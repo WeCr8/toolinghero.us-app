@@ -1,0 +1,49 @@
+[
+  {
+    "tool_name": "SHARP END MILL",
+    "abbreviation": "EM",
+    "format": "EM",
+    "unit": "imperial",
+    "category": "END_MILL",
+    "enabled": true,
+    "meta": {
+      "format_version": "1.1",
+      "created_by": "Zach Goodbody",
+      "last_modified": "2025-05-13",
+      "used_in": [
+        "DANG",
+        "Zoller Sync",
+        "CAM Import"
+      ],
+      "tags": [
+        "common",
+        "solid",
+        "iso-13399-ready"
+      ]
+    }
+  },
+  {
+    "tool_name": "SOLID CARBIDE DRILL",
+    "abbreviation": "DRSC",
+    "format": "DRSC",
+    "unit": "imperial",
+    "category": "DRILL",
+    "enabled": true,
+    "meta": {
+      "format_version": "1.1",
+      "created_by": "Zach Goodbody",
+      "last_modified": "2025-05-13",
+      "used_in": [
+        "DANG",
+        "Supabase",
+        "AWS RDS",
+        "SQL Sync"
+      ],
+      "tags": [
+        "drill",
+        "solid-carbide",
+        "imperial"
+      ]
+    }
+  }
+]

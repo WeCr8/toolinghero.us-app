@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Tool Type",
+  "type": "object",
+  "required": [
+    "tool_name",
+    "abbreviation",
+    "format",
+    "unit",
+    "category"
+  ],
+  "properties": {
+    "tool_name": {
+      "type": "string"
+    },
+    "abbreviation": {
+      "type": "string"
+    },
+    "format": {
+      "type": "string"
+    },
+    "unit": {
+      "type": "string",
+      "enum": [
+        "imperial",
+        "metric"
+      ]
+    },
+    "category": {
+      "type": "string"
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "format_version": {
+          "type": "string"
+        },
+        "created_by": {
+          "type": "string"
+        },
+        "last_modified": {
+          "type": "string"
+        },
+        "used_in": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "format_version"
+      ]
+    }
+  }
+}

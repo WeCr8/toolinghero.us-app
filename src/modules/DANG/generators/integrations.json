@@ -1,0 +1,43 @@
+{
+  "firebase": {
+    "collections": [
+      "tool_types",
+      "tool_formats",
+      "abbreviations"
+    ],
+    "auth_required": true,
+    "firestore_sync": true
+  },
+  "aws": {
+    "rds": {
+      "engine": "PostgreSQL",
+      "tables": [
+        "tools",
+        "formats",
+        "abbreviations"
+      ]
+    },
+    "s3_backup": true
+  },
+  "supabase": {
+    "tables": [
+      "tools",
+      "formats",
+      "abbreviations"
+    ],
+    "auth_required": true,
+    "realtime_support": true
+  },
+  "sql": {
+    "schema_name": "dang_tools",
+    "tables": [
+      "tools",
+      "formats",
+      "abbreviations"
+    ],
+    "relations": {
+      "tools.format": "formats.key",
+      "tools.abbreviation": "abbreviations.key"
+    }
+  }
+}

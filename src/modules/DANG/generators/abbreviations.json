@@ -1,0 +1,24 @@
+{
+  "EM": {
+    "name": "SHARP END MILL",
+    "category": "END_MILL",
+    "tags": [
+      "solid",
+      "standard",
+      "high-precision"
+    ],
+    "enabled": true,
+    "version": "1.1"
+  },
+  "DRSC": {
+    "name": "SOLID CARBIDE DRILL",
+    "category": "DRILL",
+    "tags": [
+      "drill",
+      "solid-carbide",
+      "coolant"
+    ],
+    "enabled": true,
+    "version": "1.1"
+  }
+}

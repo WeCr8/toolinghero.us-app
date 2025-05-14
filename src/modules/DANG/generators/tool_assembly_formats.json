@@ -1,0 +1,36 @@
+{
+  "EM": {
+    "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Length Of Cut} X {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+    "fields": [
+      "Cut Diameter",
+      "Grade",
+      "Holder",
+      "Holder Length",
+      "Length Of Cut",
+      "Num of Flutes",
+      "OAL",
+      "Projection Length",
+      "Tool Type Abbreviation"
+    ],
+    "unit_system": "imperial",
+    "version": "1.1",
+    "notes": "Standard end mill without neck",
+    "example": "EM 3FL .375 X .75 X 2.5 ALTIN ER16X1.5 2.00PL"
+  },
+  "DRSC": {
+    "description_formula": "{Tool Type Abbreviation}{Decimal Equivalent}({Drill Size}) X {Tip Angle}\u00b0 {Holder}X{Holder Length} {Projection Length}PL",
+    "fields": [
+      "Decimal Equivalent",
+      "Drill Size",
+      "Holder",
+      "Holder Length",
+      "Projection Length",
+      "Tip Angle",
+      "Tool Type Abbreviation"
+    ],
+    "unit_system": "imperial",
+    "version": "1.1",
+    "notes": "Solid carbide drill with standard tip",
+    "example": "DRSC .250(#C) X 118\u00b0 ER16X1.5 2.00PL"
+  }
+}
