@@ -32,11 +32,11 @@ import AuthLayout from '@/layouts/AuthLayout.vue'
 // UI Shell Components
 import SiteNavbar from '@/components/layouts/SiteNavbar.vue'
 import SiteFooter from '@/components/layouts/SiteFooter.vue'
-import ScrollToTop from '@/components/util/ScrollToTop.vue'
+//import ScrollToTop from '@/components/util/ScrollToTop.vue'
 
 // Global Modals
-import LoginRegisterModal from '@/components/modals/LoginRegisterModal'
-import GlobalAlertModal from '@/components/modals/GlobalAlertModal'
+//import LoginRegisterModal from '@/components/modals/LoginRegisterModal'
+//import GlobalAlertModal from '@/components/modals/GlobalAlertModal'
 
 // Provide modals globally
 const loginModalRef = ref(null)

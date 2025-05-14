@@ -81,10 +81,11 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts">
 import { ref, computed, onMounted } from 'vue'
-import manufacturerJson from '@/modules/manufacturer-mgmt/data/manufacturers.json'
-import componentLibrary from '@/modules/DANG/json/single-components.json'
+import manufacturerJson from '@/modules/manufacturer-mgmt/manufacuturers.json'
+import componentLibrary from '@/modules/DANG/json/SingleComponent.json'
+import cncToolAssembly from '@/modules/DANG/json/cncToolAssembly.json'
 
 const namingMode = ref('single')
 const manufacturers = ref(manufacturerJson)

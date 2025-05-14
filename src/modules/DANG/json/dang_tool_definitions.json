@@ -1,0 +1,1184 @@
+{
+    "version": "1.0",
+    "source": "DANG",
+    "tool_definitions": [
+        {
+            "tool_name": "SHARP END MILL",
+            "abbreviation": "EM",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Length Of Cut} X {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "SHARP END MILL W/NECK",
+            "abbreviation": "EM",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Length Of Cut} X {Neck Length}NK X {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Neck Length",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "BALL END MILL",
+            "abbreviation": "BEM",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Length Of Cut} X {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "BALL END MILL W/NECK",
+            "abbreviation": "BEM",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Length Of Cut} X {Neck Length}NK X {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Neck Length",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "BULL NOSE END MILL",
+            "abbreviation": "BNE",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Length Of Cut} X {OAL} X {Radius}R {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Radius",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "BULL NOSE END MILL W/NECK",
+            "abbreviation": "BNE",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Length Of Cut} X {Neck Length}NK X {OAL} X {Radius}R {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Neck Length",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Radius",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "CHIP SURFER SHARP END MILL W/NECK",
+            "abbreviation": "CSEM",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Length Of Cut} X {Neck Length}NK X {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Neck Length",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "CHIP SURFER BALL END MILL W/NECK",
+            "abbreviation": "CSBEM",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Length Of Cut} X {Neck Length}NK X {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Neck Length",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "CHIP SURFER BULL NOSE END MILL W/NECK",
+            "abbreviation": "CSBNE",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Length Of Cut} X {Neck Length}NK X {OAL} X {Radius}R {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Neck Length",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Radius",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "CHAMFER MILL",
+            "abbreviation": "CM",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Angle}\u00b0  X {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Angle",
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "CHAMFER MILL INSERTED",
+            "abbreviation": "CMI",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Angle}\u00b0  X {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Angle",
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "TAPER END MILL",
+            "abbreviation": "TEM",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Taper Angle}\u00b0 X {Length Of Cut} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Num of Flutes",
+                "Projection Length",
+                "Taper Angle",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "COBALT STEEL DRILL SCREW MACHINE",
+            "abbreviation": "DRCOS",
+            "description_formula": "{Tool Type Abbreviation}{Decimal Equivalent}({Drill Size}) X {Tip Angle}\u00b0 {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Decimal Equivalent",
+                "Drill Size",
+                "Holder",
+                "Holder Length",
+                "Projection Length",
+                "Tip Angle",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "COBALT STEEL DRILL JOBBER",
+            "abbreviation": "DRCOS",
+            "description_formula": "{Tool Type Abbreviation}{Decimal Equivalent}({Drill Size})-J X {Tip Angle}\u00b0 {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Decimal Equivalent",
+                "Drill Size",
+                "Holder",
+                "Holder Length",
+                "Projection Length",
+                "Tip Angle",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "COBALT STEEL DRILL EXTENDED LENGTH DRILL",
+            "abbreviation": "DRCOS",
+            "description_formula": "{Tool Type Abbreviation}{Decimal Equivalent}({Drill Size})-EL X {Tip Angle}\u00b0 {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Decimal Equivalent",
+                "Drill Size",
+                "Holder",
+                "Holder Length",
+                "Projection Length",
+                "Tip Angle",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "COBALT STEEL DRILL TAPER LENGTH DRILL",
+            "abbreviation": "DRCOS",
+            "description_formula": "{Tool Type Abbreviation}{Decimal Equivalent}({Drill Size})-TL X {Tip Angle}\u00b0 {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Decimal Equivalent",
+                "Drill Size",
+                "Holder",
+                "Holder Length",
+                "Projection Length",
+                "Tip Angle",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "COBALT STEEL DRILL AIRCRAFT LENGTH DRILL",
+            "abbreviation": "DRCOS",
+            "description_formula": "{Tool Type Abbreviation}{Decimal Equivalent}({Drill Size})-ACD X {Tip Angle}\u00b0 {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Decimal Equivalent",
+                "Drill Size",
+                "Holder",
+                "Holder Length",
+                "Projection Length",
+                "Tip Angle",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "SOLID CARBIDE DRILL",
+            "abbreviation": "DRSC",
+            "description_formula": "{Tool Type Abbreviation}{Decimal Equivalent}({Drill Size}) X {Tip Angle}\u00b0 {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Decimal Equivalent",
+                "Drill Size",
+                "Holder",
+                "Holder Length",
+                "Projection Length",
+                "Tip Angle",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "SOLID CARBIDE COOLANT THRU DRILL",
+            "abbreviation": "DRSC",
+            "description_formula": "{Tool Type Abbreviation}{Decimal Equivalent}({Drill Size})CLNT X {Tip Angle}\u00b0 {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Decimal Equivalent",
+                "Drill Size",
+                "Holder",
+                "Holder Length",
+                "Projection Length",
+                "Tip Angle",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "POWDERED METAL DRILL",
+            "abbreviation": "DRPM",
+            "description_formula": "{Tool Type Abbreviation}{Decimal Equivalent}({Drill Size}) X {Tip Angle}\u00b0 {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Decimal Equivalent",
+                "Drill Size",
+                "Holder",
+                "Holder Length",
+                "Projection Length",
+                "Tip Angle",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "POWDERED METAL COOLANT THRU DRILL",
+            "abbreviation": "DRPM",
+            "description_formula": "{Tool Type Abbreviation}{Decimal Equivalent}({Drill Size})CLNT X {Tip Angle}\u00b0 {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Decimal Equivalent",
+                "Drill Size",
+                "Holder",
+                "Holder Length",
+                "Projection Length",
+                "Tip Angle",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "INSERT DRILL",
+            "abbreviation": "ID",
+            "description_formula": "{Tool Type Abbreviation}{Decimal Equivalent} X {Radius} X {Tip Angle}{Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Decimal Equivalent",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Projection Length",
+                "Radius",
+                "Tip Angle",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "DOVETAIL CUTTER",
+            "abbreviation": "DT",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Length Of Cut} X {Neck Length}nk X {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Neck Length",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "DOUBLE ANGLE",
+            "abbreviation": "DA",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Angle}\u00b0  X {Neck Length}NK X {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Angle",
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Neck Length",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "DOUBLE ANGLE INSERTED",
+            "abbreviation": "DAI",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Angle}\u00b0  X {Neck Length}NK X {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Angle",
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Neck Length",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "INSERT MILL",
+            "abbreviation": "IM",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Length Of Cut} X {Neck Length}NK X {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Neck Length",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "FACE MILL",
+            "abbreviation": "FM",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Length Of Cut} {Grade}",
+            "fields": [
+                "Cut Diameter",
+                "Grade",
+                "Length Of Cut",
+                "Num of Flutes",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "ENGRAVER",
+            "abbreviation": "ENG",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Tip Angle}\u00b0 {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Cut Diameter",
+                "Holder",
+                "Holder Length",
+                "Num of Flutes",
+                "Projection Length",
+                "Tip Angle",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "BACKDRAFT CUTTER",
+            "abbreviation": "BC",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Length Of Cut} X {Tip Angle}\u00b0 {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Tip Angle",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "BACKDRAFT CUTTER CORNER RADIUS",
+            "abbreviation": "BCCR",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Length Of Cut} X {Tip Angle}\u00b0 X {Radius}R {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Radius",
+                "Tip Angle",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "HIGH SPEED FEED MILL",
+            "abbreviation": "HSFM",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Length Of Cut} X {Neck Length}NK X {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Neck Length",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "CENTER DRILL SHORT",
+            "abbreviation": "CD",
+            "description_formula": "{Tool Type Abbreviation} #{Center Drill Num} SHORT {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Center Drill Num",
+                "Holder",
+                "Holder Length",
+                "Projection Length",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "CENTER DRILL LONG",
+            "abbreviation": "CD",
+            "description_formula": "{Tool Type Abbreviation} #{Center Drill Num} LONG {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Center Drill Num",
+                "Holder",
+                "Holder Length",
+                "Projection Length",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "CARBIDE CENTER DRILL SHORT",
+            "abbreviation": "CDSC",
+            "description_formula": "{Tool Type Abbreviation} #{Center Drill Num} SHORT {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Center Drill Num",
+                "Holder",
+                "Holder Length",
+                "Projection Length",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "CARBIDE CENTER DRILL LONG",
+            "abbreviation": "CDSC",
+            "description_formula": "{Tool Type Abbreviation} #{Center Drill Num} LONG {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Center Drill Num",
+                "Holder",
+                "Holder Length",
+                "Projection Length",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "KEY CUTTER",
+            "abbreviation": "KC",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Length Of Cut} X {Neck Length}NK X {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Neck Length",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "SOLID CARBIDE KEY CUTTER",
+            "abbreviation": "KCSC",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Length Of Cut} X {Neck Length}NK X {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Neck Length",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "KEY CUTTER INSERTED",
+            "abbreviation": "KCI",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Length Of Cut} X {Neck Length}NK X {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Neck Length",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "Lathe Boring",
+            "abbreviation": "BB",
+            "description_formula": "{Tool Type Abbreviation} {Bar Diameter} X {Tip Radius}R X {Max Depth}D X {OAL} {Grade} {Projection Length}PL",
+            "fields": [
+                "Bar Diameter",
+                "Grade",
+                "Max Depth",
+                "OAL",
+                "Projection Length",
+                "Tip Radius",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "Lathe ID Grooving",
+            "abbreviation": "IDG",
+            "description_formula": "{Tool Type Abbreviation} {Bar Diameter} X {Width of Cut} X {Tip Radius}R X {Max Depth}D X {OAL} {Grade} {Projection Length}PL",
+            "fields": [
+                "Bar Diameter",
+                "Grade",
+                "Max Depth",
+                "OAL",
+                "Projection Length",
+                "Tip Radius",
+                "Tool Type Abbreviation",
+                "Width of Cut"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "Lathe OD Grooving",
+            "abbreviation": "ODG",
+            "description_formula": "{Tool Type Abbreviation} X {Width of Cut} X {Tip Radius}R X {Max Depth}D X {OAL} {Grade} {Projection Length}PL",
+            "fields": [
+                "Grade",
+                "Max Depth",
+                "OAL",
+                "Projection Length",
+                "Tip Radius",
+                "Tool Type Abbreviation",
+                "Width of Cut"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "Lathe ID Threading",
+            "abbreviation": "IDTH",
+            "description_formula": "{Tool Type Abbreviation} {Bar Diameter} X {Thread Type} X {Max Depth}D X {OAL} {Grade} {Projection Length}PL",
+            "fields": [
+                "Bar Diameter",
+                "Grade",
+                "Max Depth",
+                "OAL",
+                "Projection Length",
+                "Thread Type",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "Lathe OD Threading",
+            "abbreviation": "ODTH",
+            "description_formula": "{Tool Type Abbreviation} {Thread Type} {Grade} {Projection Length}PL",
+            "fields": [
+                "Grade",
+                "Projection Length",
+                "Thread Type",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "RUNNER CUTTER",
+            "abbreviation": "RC",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Shank Diameter} X {Length Of Cut} X {Tip Angle}\u00b0 {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Shank Diameter",
+                "Tip Angle",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "PICATINNY FORM ATTACHMENT CUTTER",
+            "abbreviation": "PFAC",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Length Of Cut} X {Angle}\u00b0 X {Neck Length}NK X {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Angle",
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Neck Length",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "PICATINNY RAIL FORM CUTTER",
+            "abbreviation": "PFRC",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Length Of Cut} X {Minor Cut Diameter} X {Minor Diameter Length} X {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Minor Cut Diameter",
+                "Minor Diameter Length",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "PICATINNY FORM RECOIL GROOVE",
+            "abbreviation": "PFRG",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Length Of Cut} X {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "PICATINNY FORM RECOIL GROOVE RADIUS",
+            "abbreviation": "PFRG",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Length Of Cut} X {OAL} X {Radius}R {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Radius",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "REAMER",
+            "abbreviation": "REAM",
+            "description_formula": "{Tool Type Abbreviation}{Decimal Equivalent} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Decimal Equivalent",
+                "Holder",
+                "Holder Length",
+                "Projection Length",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "SLITTING SAW",
+            "abbreviation": "SAW",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Cut Diameter} X {Length Of Cut} X {Neck Length}NK X {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Cut Diameter",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Neck Length",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "SPOT DRILL",
+            "abbreviation": "SD",
+            "description_formula": "{Tool Type Abbreviation} {Cut Diameter} X {Tip Angle}\u00b0 {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Cut Diameter",
+                "Holder",
+                "Holder Length",
+                "Projection Length",
+                "Tip Angle",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "SPOT DRILL INSERTED",
+            "abbreviation": "SDI",
+            "description_formula": "{Tool Type Abbreviation} {Cut Diameter} X {Tip Angle}\u00b0 {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Cut Diameter",
+                "Holder",
+                "Holder Length",
+                "Projection Length",
+                "Tip Angle",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "SOLID CARBIDE SPOT DRILL",
+            "abbreviation": "SDSC",
+            "description_formula": "{Tool Type Abbreviation} {Cut Diameter} X {Tip Angle}\u00b0 {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Cut Diameter",
+                "Holder",
+                "Holder Length",
+                "Projection Length",
+                "Tip Angle",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "SPIRAL FLUTE",
+            "abbreviation": "SF",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Tap Sizes} {Class Fit} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Class Fit",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Num of Flutes",
+                "Projection Length",
+                "Tap Sizes",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "SPIRAL POINT",
+            "abbreviation": "SP",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Tap Sizes} {Class Fit} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Class Fit",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Num of Flutes",
+                "Projection Length",
+                "Tap Sizes",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "FORM/ROLL TAP",
+            "abbreviation": "RT",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Tap Sizes} {Class Fit} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Class Fit",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Num of Flutes",
+                "Projection Length",
+                "Tap Sizes",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "SPIRAL FLUTE BOTTOM TAP",
+            "abbreviation": "SF",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Tap Sizes}BTM {Class Fit} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Class Fit",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Num of Flutes",
+                "Projection Length",
+                "Tap Sizes",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "FORM/ROLL BOTTOM TAP",
+            "abbreviation": "RT",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Tap Sizes}BTM {Class Fit} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Class Fit",
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Num of Flutes",
+                "Projection Length",
+                "Tap Sizes",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "CIRCLE SEGMENT CUTTER",
+            "abbreviation": "CSC",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Shank Diameter} X {Length Of Cut} X {Tip Angle}\u00b0 {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Shank Diameter",
+                "Tip Angle",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "CIRCLE SEGMENT CUTTER BARREL",
+            "abbreviation": "CSCB",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Shank Diameter} X {Length Of Cut} X {Tip Angle}\u00b0 {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Shank Diameter",
+                "Tip Angle",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "CIRCLE SEGMENT CUTTER OVAL",
+            "abbreviation": "CSCO",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Shank Diameter} X {Length Of Cut} X {Tip Angle}\u00b0 {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Shank Diameter",
+                "Tip Angle",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "CIRCLE SEGMENT CUTTER TAPER",
+            "abbreviation": "CSCT",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Shank Diameter} X {Length Of Cut} X {Tip Angle}\u00b0 {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Shank Diameter",
+                "Tip Angle",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "CIRCLE SEGMENT CUTTER LENS",
+            "abbreviation": "CSCL",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Shank Diameter} X {Length Of Cut} X {Tip Angle}\u00b0 {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Shank Diameter",
+                "Tip Angle",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        },
+        {
+            "tool_name": "UNDERCUT END MILL",
+            "abbreviation": "UE",
+            "description_formula": "{Tool Type Abbreviation} {Num of Flutes}FL {Shank Diameter} X {Length Of Cut} X {Neck Length}NK X {OAL} {Grade} {Holder}X{Holder Length} {Projection Length}PL",
+            "fields": [
+                "Grade",
+                "Holder",
+                "Holder Length",
+                "Length Of Cut",
+                "Neck Length",
+                "Num of Flutes",
+                "OAL",
+                "Projection Length",
+                "Shank Diameter",
+                "Tool Type Abbreviation"
+            ],
+            "category": "",
+            "unit": "imperial",
+            "enabled": true
+        }
+    ]
+}

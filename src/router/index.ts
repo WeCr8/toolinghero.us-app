@@ -1,27 +1,51 @@
-// src/main.ts
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-import { createHead } from '@vueuse/head'
-import App from './App.vue'
-import router from './router'
+import { createRouter, createWebHistory } from 'vue-router'
+import type { RouteRecordRaw } from 'vue-router'
 
-// Global styles
-import '@/assets/css/main.css'
+// Lazy-loaded views
+const HomeView = () => import('@/views/HomeView.vue')
+//const AboutView = () => import('@/views/AboutView.vue')
+//const ContactView = () => import('@/views/ContactView.vue')
 
-// Firebase init (optional if you’re using auth or Firestore early)
-import '@/services/firebase/init'
+const routes: RouteRecordRaw[] = [
+  {
+    path: '/',
+    name: 'Home',
+    component: HomeView,
+    meta: {
+      layout: 'DefaultLayout',
+      showNavbar: true,
+      showFooter: true,
+    },
+  },
+  //{
+  //  path: '/about',
+  //  name: 'About',
+  //  component: AboutView,
+  //  meta: {
+  //    layout: 'DefaultLayout',
+  //     showNavbar: true,
+  //     showFooter: true,
+  //   },
+  // },
+  //{
+  //  path: '/contact',
+  //  name: 'Contact',
+  //  component: ContactView,
+  //  meta: {
+  //    layout: 'AuthLayout',
+  //    showNavbar: false,
+  //    showFooter: false,
+  //  },
+  //},
+  //{
+  //   path: '/:pathMatch(.*)*',
+  //  redirect: '/',
+  // // },
+]
 
-const app = createApp(App)
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+})
 
-// 🧠 Global stores + plugins
-app.use(createPinia())
-
-// 🌐 Router
-app.use(router)
-
-// 🧠 Meta tags (for SEO/PWA)
-const head = createHead()
-app.use(head)
-
-// 🔁 Mount when ready
-app.mount('#app')
+export default router
