@@ -42,12 +42,7 @@
           <router-link to="/about" class="btn-secondary"> 📘 Learn More </router-link>
         </div>
       </div>
-    </div>
 
-    <!-- Footer -->
-    <footer class="text-center text-sm text-gray-400 mt-24">
-      © 2025 Tooling Hero by WeCr8 Solutions · All rights reserved
-    </footer>
   </section>
 </template>
 

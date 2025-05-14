@@ -1,57 +1,27 @@
-// src/router/index.ts
+// src/main.ts
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
+import { createHead } from '@vueuse/head'
+import App from './App.vue'
+import router from './router'
 
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import HomeView from '@/views/HomeView.vue'
-import DangToolGeneratorView from '@/modules/DANG/views/DangToolGeneratorView.vue'
-import NotFoundView from '@/views/NotFoundView.vue'
+// Global styles
+import '@/assets/css/main.css'
 
-// Optional: Lazy load more routes in modules
-// import DarnDashboard from '@/modules/DARN/views/DarnDashboardView.vue'
+// Firebase init (optional if you’re using auth or Firestore early)
+import '@/services/firebase/init'
 
-const routes: RouteRecordRaw[] = [
-  {
-    path: '/',
-    name: 'Home',
-    component: HomeView,
-    meta: { layout: 'DefaultLayout', requiresAuth: false },
-  },
-  {
-    path: '/dang',
-    name: 'DANG',
-    component: DangToolGeneratorView,
-    meta: { layout: 'DefaultLayout', requiresAuth: false },
-  },
-  {
-    path: '/:pathMatch(.*)*',
-    name: 'NotFound',
-    component: NotFoundView,
-    meta: { layout: 'MarketingLayout' },
-  },
-]
+const app = createApp(App)
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes,
-  scrollBehavior() {
-    return { top: 0, behavior: 'smooth' }
-  },
-})
+// 🧠 Global stores + plugins
+app.use(createPinia())
 
-// 🔐 Optional route guards (auth/tiered features)
-router.beforeEach((to, from, next) => {
-  const isAuthenticated = localStorage.getItem('authToken') // or use Firebase/Auth store
-  const userTier = localStorage.getItem('userTier') || 'free' // free, pro, enterprise
+// 🌐 Router
+app.use(router)
 
-  if (to.meta.requiresAuth && !isAuthenticated) {
-    return next({ name: 'Home' }) // or redirect to Login
-  }
+// 🧠 Meta tags (for SEO/PWA)
+const head = createHead()
+app.use(head)
 
-  // Optional: Route restriction by tier
-  if (to.meta.requiredTier && to.meta.requiredTier !== userTier) {
-    return next({ name: 'Home' }) // or to upgrade page
-  }
-
-  next()
-})
-
-export default router
+// 🔁 Mount when ready
+app.mount('#app')

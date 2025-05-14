@@ -1,1 +1,2 @@
-/// <reference types="vite/client" />
+//env.d.ts
+// /// <reference types="vite/client" />
