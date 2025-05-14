@@ -1,8 +1,8 @@
-// src/main.ts
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+
 import App from './App.vue'
-import router from './router' // ✅ Fix path
+import router from './router'
 import '@/assets/css/main.css'
 
 const app = createApp(App)

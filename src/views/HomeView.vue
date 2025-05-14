@@ -42,7 +42,7 @@
           <router-link to="/about" class="btn-secondary"> 📘 Learn More </router-link>
         </div>
       </div>
-
+    </div>
   </section>
 </template>
 
@@ -52,7 +52,7 @@ import { useRouter } from 'vue-router'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 
 const router = useRouter()
-const loginModalRef = inject('loginModalRef')
+const loginModalRef = inject<{ openLogin: () => void }>('loginModalRef')
 const loading = ref(false)
 
 const handleAuthStart = () => {

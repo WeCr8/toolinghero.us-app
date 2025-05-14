@@ -35,8 +35,8 @@ import SiteFooter from '@/components/layouts/SiteFooter.vue'
 import ScrollToTop from '@/components/util/ScrollToTop.vue'
 
 // Global Modals
-import LoginRegisterModal from '@/components/modals/LoginRegisterModal.vue'
-import GlobalAlertModal from '@/components/modals/GlobalAlertModal.vue'
+import LoginRegisterModal from '@/components/modals/LoginRegisterModal'
+import GlobalAlertModal from '@/components/modals/GlobalAlertModal'
 
 // Provide modals globally
 const loginModalRef = ref(null)
