@@ -1,0 +1,32 @@
+{
+  "components": [
+    {
+      "id": "KEN123456",
+      "manufacturer": "KENNAMETAL",
+      "edp": "123456",
+      "tool_type": "Solid Carbide End Mill",
+      "abbreviation": "EM",
+      "cut_diameter": 0.5,
+      "length_of_cut": 1.0,
+      "oal": 3.0,
+      "grade": "KCP25",
+      "coating": "TiAlN",
+      "unit": "imperial",
+      "description": "EM .500 X 1.0 X 3.0 KCP25 TiAlN"
+    },
+    {
+      "id": "YGX789123",
+      "manufacturer": "YG-1",
+      "edp": "789123",
+      "tool_type": "Drill",
+      "abbreviation": "DR",
+      "cut_diameter": 0.25,
+      "length_of_cut": 1.25,
+      "oal": 2.5,
+      "grade": "PM60",
+      "coating": "AlCrN",
+      "unit": "imperial",
+      "description": "DR .250 X 1.25 X 2.5 PM60 AlCrN"
+    }
+  ]
+}
