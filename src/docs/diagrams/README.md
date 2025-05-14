@@ -1,0 +1,3 @@
+# Readme
+
+This is a placeholder for `README.md` in `docs/diagrams`.
