@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   🌐 ToolingHero Global Styles (Tailwind-Compatible)
+   ============================================ */
+
+/* ---------- CSS Variables ---------- */
+:root {
+  --color-primary: #1b365d;
+  --color-accent: #f05727;
+  --color-background: #ffffff;
+  --color-heading: #1b365d;
+  --color-text: #333333;
+  --color-light: #f5f5f5;
+  --color-muted: #888888;
+  --color-border: #dddddd;
+  --color-border-hover: #bbbbbb;
+  --section-gap: 4rem;
+  --max-width: 1280px;
+}
+
+/* ---------- Base Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  @apply min-h-screen bg-white text-gray-900 font-sans antialiased;
+  scroll-behavior: smooth;
+}
+
+/* ---------- Typography ---------- */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  color: var(--color-heading);
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+p {
+  margin-bottom: 1rem;
+}
+
+/* ---------- Layout ---------- */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ---------- Sections ---------- */
+.section {
+  padding: var(--section-gap) 1rem;
+}
+.section-light {
+  background-color: var(--color-light);
+}
+.section-dark {
+  background-color: var(--color-heading);
+  color: white;
+}
+.section-blue {
+  background-color: var(--color-primary);
+  color: white;
+  position: relative;
+  padding: 5rem 1rem 6rem;
+}
+.section-blue::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 0;
+}
+.section-blue > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Buttons ---------- */
+button,
+.cta {
+  background-color: var(--color-accent);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+button:hover,
+.cta:hover {
+  background-color: #d9481f;
+}
+
+/* ---------- Forms ---------- */
+input,
+select,
+textarea {
+  @apply w-full border border-gray-300 rounded px-4 py-2;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--color-accent);
+  outline: none;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: var(--color-primary);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+footer a:hover {
+  color: var(--color-accent);
+}
+
+/* ---------- Utilities ---------- */
+.text-muted {
+  color: var(--color-muted);
+}
+.text-heading {
+  color: var(--color-heading);
+}
