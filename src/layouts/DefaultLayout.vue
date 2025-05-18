@@ -1,43 +1,23 @@
 <template>
-  <div class="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white">
-    <!-- 🔝 Global Navbar -->
-    <Navbar />
+  <div
+    class="layout-container flex flex-col min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+  >
+    <!-- 🔝 Top Navigation -->
+    <SiteNavbar />
 
-    <!-- 📦 Main Content Area -->
-    <main class="flex-1 pt-16">
-      <div class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
-        <slot />
-      </div>
+    <!-- 🔁 Routed Content -->
+    <main class="flex-1 p-4 pt-20">
+      <!-- pt-20 ensures content isn't hidden behind fixed navbar -->
+      <slot />
     </main>
 
-    <!-- 📌 Optional Footer Slot -->
-    <footer v-if="$slots.footer" class="mt-8">
-      <slot name="footer" />
-    </footer>
+    <!-- 🔻 Footer -->
+    <SiteFooter />
   </div>
 </template>
 
 <script setup lang="ts">
-import Navbar from '@/components/layouts/SiteNavbar.vue'
-import SiteFooter from '@/components/layouts/SiteFooter.vue'
-
-// Optional: Use the SiteFooter component if you have a footer slot
-// if ($slots.footer) {
-//   <SiteFooter />
-// }
-//   loading.value = false
-// }
-//   onAuthStateChanged(auth, (user) => {
-//     if (user) {
-//       router.push('/dashboard')
-//     } else {
-//       loading.value = false
-//       loginModalRef?.openLogin()
-//     }
-//   })
-// }
-
-// Optional head support
-// import { useHead } from '@vueuse/head'
-// useHead({ title: 'Tooling Hero – Default Layout' })
+// ✅ Imports from actual location: src/components/
+import SiteNavbar from '../components/SiteNavbar.vue'
+import SiteFooter from '../components/SiteFooter.vue'
 </script>

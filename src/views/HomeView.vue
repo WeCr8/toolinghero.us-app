@@ -1,15 +1,16 @@
 <template>
-  <section class="bg-white pt-24 pb-32 text-center fade-in">
+  <section class="bg-white dark:bg-gray-900 text-center pt-24 pb-32 fade-in">
     <div class="container mx-auto px-6">
       <!-- Hero Heading -->
-      <h1 class="text-5xl font-extrabold text-gray-900 leading-tight mb-4">
+      <h1 class="text-5xl font-extrabold text-gray-900 dark:text-white leading-tight mb-4">
         Welcome to <span class="text-blue-600">Tooling Hero</span>
       </h1>
-      <p class="text-lg text-gray-600 max-w-xl mx-auto mb-12">
+
+      <p class="text-lg text-gray-600 dark:text-gray-300 max-w-xl mx-auto mb-12">
         Empowering manufacturers with smarter tooling workflows — from shop floor to digital twin.
       </p>
 
-      <!-- Start App Button -->
+      <!-- Start App -->
       <div class="mb-20">
         <button
           @click="handleAuthStart"
@@ -23,36 +24,39 @@
 
       <!-- DANG Feature Block -->
       <div
-        class="bg-gray-50 border border-blue-100 p-10 rounded-xl shadow-md max-w-3xl mx-auto text-left"
+        class="bg-gray-50 dark:bg-gray-800 border border-blue-100 dark:border-blue-900 p-10 rounded-xl shadow-md max-w-3xl mx-auto text-left"
       >
-        <h2 class="text-3xl font-bold text-blue-800 mb-4 text-center">🔥 Meet DANG</h2>
-        <p class="text-gray-700 mb-8 leading-relaxed text-center">
+        <h2 class="text-3xl font-bold text-blue-800 dark:text-blue-300 mb-4 text-center">
+          🔥 Meet DANG
+        </h2>
+        <p class="text-gray-700 dark:text-gray-200 mb-8 leading-relaxed text-center">
           <strong>DANG</strong> (Description And Naming Generator) standardizes your tooling
           language across Zoller, Mastercam, and ERP systems — cutting confusion and boosting
           productivity.
         </p>
 
         <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <!-- Launch DANG Button -->
           <button @click="handleAuthStart" class="btn-primary" :disabled="loading">
             ⚙️ Launch DANG
           </button>
-
-          <!-- Learn More -->
           <router-link to="/about" class="btn-secondary"> 📘 Learn More </router-link>
         </div>
       </div>
     </div>
+
+    <footer class="text-center text-sm text-gray-400 mt-24">
+      © 2025 Tooling Hero by WeCr8 Solutions · All rights reserved
+    </footer>
   </section>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { ref, inject } from 'vue'
 import { useRouter } from 'vue-router'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 
 const router = useRouter()
-const loginModalRef = inject<{ openLogin: () => void }>('loginModalRef')
+const loginModalRef = inject('loginModalRef')
 const loading = ref(false)
 
 const handleAuthStart = () => {
@@ -90,6 +94,6 @@ const handleAuthStart = () => {
 }
 
 .btn-secondary {
-  @apply border border-blue-500 text-blue-600 font-semibold px-8 py-3 rounded-full hover:bg-blue-50 transition duration-200;
+  @apply border border-blue-500 text-blue-600 dark:text-blue-300 font-semibold px-8 py-3 rounded-full hover:bg-blue-50 dark:hover:bg-gray-700 transition duration-200;
 }
 </style>
