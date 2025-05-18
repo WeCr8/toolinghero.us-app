@@ -1,0 +1,9 @@
+<template>
+  <div class="p-4 text-center">
+    <h1>LoginView</h1>
+  </div>
+</template>
+
+<script setup>
+// Placeholder for LoginView.vue
+</script>

@@ -3,10 +3,20 @@
     <DefaultLayout>
       <router-view />
     </DefaultLayout>
+
+    <!-- Global Modal Manager -->
+    <ModalManager />
   </div>
 </template>
 
 <script setup lang="ts">
-// ✅ Only import layouts here. Leave SiteNavbar/Footer inside the layout file.
+// ✅ Import the layout as you already do
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
+
+// ✅ Inject the modal system
+import { provideModalManager } from '@/modals/manager/useModalManager'
+provideModalManager()
+
+// ✅ Import the modal renderer
+import ModalManager from '@/modals/manager/ModalManager.vue'
 </script>
