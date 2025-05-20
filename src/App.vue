@@ -1,22 +1,23 @@
 <template>
   <div class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+    <!-- Global Layout -->
     <DefaultLayout>
       <router-view />
     </DefaultLayout>
 
-    <!-- Global Modal Manager -->
+    <!-- Global Modal Renderer -->
     <ModalManager />
   </div>
 </template>
 
 <script setup lang="ts">
-// ✅ Import the layout as you already do
+// ✅ Layout
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
 
-// ✅ Inject the modal system
+// ✅ Modal system injection
 import { provideModalManager } from '@/modals/manager/useModalManager'
 provideModalManager()
 
-// ✅ Import the modal renderer
+// ✅ Modal renderer
 import ModalManager from '@/modals/manager/ModalManager.vue'
 </script>

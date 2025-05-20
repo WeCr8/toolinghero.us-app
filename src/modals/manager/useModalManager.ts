@@ -1,16 +1,17 @@
-// src/modals/manager/useModalManager.ts
-import { ref, shallowRef, provide } from 'vue'
+import { ref, shallowRef, provide, type Component, type ShallowRef, type Ref } from 'vue'
 
-// Track modal state
-const modalComponent = shallowRef<any>(null)
-const modalProps = ref<any>({})
-const modalVisible = ref(false)
+interface ModalProps {
+  onConfirm?: () => void
+  [key: string]: unknown
+}
 
-// Provide modal controller
+const modalComponent: ShallowRef<Component | null> = shallowRef(null)
+const modalProps: Ref<ModalProps> = ref({})
+const modalVisible: Ref<boolean> = ref(false)
+
 export function provideModalManager() {
-  const openModal = async (name: string, props: Record<string, any> = {}) => {
-    // Lazy-load modal from modals/modals/
-    const module = await import(`../modals/${name}.vue`)
+  const openModal = async (name: string, props: ModalProps = {}) => {
+    const module = await import(`../modals/modals/${name}.vue`)
     modalComponent.value = module.default
     modalProps.value = props
     modalVisible.value = true

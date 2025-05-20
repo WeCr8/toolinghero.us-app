@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "source": "DANG",
+  "tool_definitions": [
+    {
+      "component_type": "Insert",
+      "description_fields": ["Shape", "Grade", "Manufacturer", "Coating"],
+      "id_formula": "{ManufacturerCode}{EDP}",
+      "description_formula": "{Shape} {Grade} {Coating}"
+    }
+  ]
+}

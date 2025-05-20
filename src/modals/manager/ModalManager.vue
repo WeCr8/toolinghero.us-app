@@ -3,7 +3,7 @@
     <component
       v-if="visible && component"
       :is="component"
-      v-bind="props"
+      v-bind="props ?? {}"
       @close="close"
       @confirm="onConfirm"
     />
@@ -11,17 +11,27 @@
 </template>
 
 <script setup lang="ts">
-import { inject } from 'vue'
+import type { Component } from 'vue'
+import { inject, Ref } from 'vue'
 
-const visible = inject('modalVisible')!
-const component = inject('modalComponent')!
-const props = inject('modalProps')!
-const close = inject('closeModal')!
+// Define a shape for modal props (flexible yet typed)
+interface ModalProps {
+  onConfirm?: () => void
+  [key: string]: unknown
+}
 
+// Inject modal state and actions with proper types
+const visible = inject<Ref<boolean>>('modalVisible')
+const component = inject<Ref<Component | null>>('modalComponent')
+const props = inject<Ref<ModalProps>>('modalProps')
+const close = inject<() => void>('closeModal')
+
+// Safely handle confirm logic
 const onConfirm = () => {
-  if (props.onConfirm && typeof props.onConfirm === 'function') {
-    props.onConfirm()
+  const confirmFn = props?.value?.onConfirm
+  if (typeof confirmFn === 'function') {
+    confirmFn()
   }
-  close()
+  close?.()
 }
 </script>
