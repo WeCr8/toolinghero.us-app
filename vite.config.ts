@@ -1,5 +1,5 @@
+// vite.config.ts
 import path from 'path'
-
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
@@ -11,7 +11,7 @@ export default defineConfig({
   plugins: [vue(), vueJsx(), vueDevTools(), nightwatchPlugin(), Inspect()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'), // ✅ Alias works without import.meta
+      '@': path.resolve(__dirname, './src'),
     },
   },
   server: {
