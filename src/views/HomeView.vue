@@ -10,7 +10,7 @@
           Empowering manufacturers with smarter tooling workflows — from shop floor to digital twin.
         </p>
         <button
-          @click="handleAuthStart"
+          @click="redirectToApp"
           class="btn-primary inline-flex items-center justify-center"
           :disabled="loading"
         >
@@ -30,7 +30,7 @@
           productivity.
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <button @click="handleAuthStart" class="btn-primary" :disabled="loading">
+          <button @click="redirectToApp" class="btn-primary" :disabled="loading">
             ⚙️ Launch DANG
           </button>
           <router-link to="/about" class="btn-secondary"> 📘 Learn More </router-link>
@@ -61,5 +61,10 @@ const handleAuthStart = () => {
       loginModalRef?.openLogin()
     }
   })
+}
+
+// Expose redirectToApp for template usage
+const redirectToApp = () => {
+  handleAuthStart()
 }
 </script>
