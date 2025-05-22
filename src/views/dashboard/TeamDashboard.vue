@@ -4,7 +4,9 @@
     <div class="flex items-center justify-between">
       <div>
         <h1 class="text-3xl font-bold text-gray-900 dark:text-white">🛠 Team Dashboard</h1>
-        <p class="text-sm text-gray-500 dark:text-gray-300">Welcome, {{ user?.email }}</p>
+        <p class="text-sm text-gray-500 dark:text-gray-300">
+          Welcome, {{ user?.email || 'User' }}
+        </p>
       </div>
       <div v-if="isAdmin" class="text-sm text-green-600 font-semibold">Admin Mode</div>
     </div>
@@ -16,9 +18,9 @@
         <div
           v-for="mod in availableModules"
           :key="mod.name"
-          class="p-4 rounded-lg border shadow hover:shadow-md bg-white dark:bg-gray-800"
+          class="p-4 rounded-lg border shadow hover:shadow-md bg-white dark:bg-gray-800 transition-all duration-200"
         >
-          <h3 class="text-lg font-bold">{{ mod.name }}</h3>
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white">{{ mod.name }}</h3>
           <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">{{ mod.description }}</p>
           <span class="text-xs text-blue-500">Tier: {{ mod.tier }}</span>
         </div>
@@ -57,19 +59,18 @@ const db = getFirestore()
 
 const user = ref(auth.currentUser)
 const isAdmin = ref(false)
-const availableModules = ref<{ name: string; description: string; tier: string }[]>([])
 
-const goToLibrary = () => {
-  router.push('/library')
-}
+const defaultModules = [
+  { name: 'DANG Tool Generator', description: 'Standardize your tool naming.', tier: 'Core' },
+  { name: 'Tool Library', description: 'Centralized team library.', tier: 'Core' },
+  { name: 'Approval Queue', description: 'Review team submissions.', tier: 'Pro' },
+]
 
-const manageUsers = () => {
-  router.push('/team-dashboard/users')
-}
+const availableModules = ref(defaultModules)
 
-const reviewApprovals = () => {
-  router.push('/team-dashboard/approvals')
-}
+const goToLibrary = () => router.push('/library')
+const manageUsers = () => router.push('/team-dashboard/users')
+const reviewApprovals = () => router.push('/team-dashboard/approvals')
 
 onMounted(async () => {
   if (!user.value) return
@@ -80,20 +81,16 @@ onMounted(async () => {
   if (userSnap.exists()) {
     const data = userSnap.data()
     isAdmin.value = data.role === 'admin' || data.teamRole === 'leader'
-    availableModules.value = data.modules || [
-      { name: 'DANG Tool Generator', description: 'Standardize your tool naming.', tier: 'Core' },
-      { name: 'Tool Library', description: 'Centralized team library.', tier: 'Core' },
-      { name: 'Approval Queue', description: 'Review team submissions.', tier: 'Pro' },
-    ]
+    availableModules.value = data.modules?.length ? data.modules : defaultModules
   }
 })
 </script>
 
 <style scoped>
 .btn-primary {
-  @apply bg-blue-600 text-white px-5 py-2 rounded font-semibold hover:bg-blue-700;
+  @apply bg-blue-600 text-white px-5 py-2 rounded font-semibold hover:bg-blue-700 transition;
 }
 .btn-secondary {
-  @apply bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-100 px-4 py-2 rounded font-medium hover:bg-gray-200 dark:hover:bg-gray-600;
+  @apply bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-100 px-4 py-2 rounded font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition;
 }
 </style>
