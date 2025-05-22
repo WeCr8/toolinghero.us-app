@@ -1,14 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-// Direct import for core route (critical path)
+// Direct import for critical home route
 import HomeView from '@/views/HomeView.vue'
 
-// Lazy loaded views (scales better)
+// Lazy loaded routes for optimized build
 const DangView = () => import('@/views/DangView.vue')
+const AboutView = () => import('@/views/AboutView.vue')
 const PersonalDashboard = () => import('@/views/dashboard/PersonalDashboard.vue')
 const TeamDashboard = () => import('@/views/dashboard/TeamDashboard.vue')
-const NotFoundView = () => import('@/views/NotFound.vue') // Create if not yet
+const NotFoundView = () => import('@/views/NotFound.vue')
 
+// All app routes
 const routes = [
   {
     path: '/',
@@ -23,7 +25,16 @@ const routes = [
     name: 'DangGenerator',
     component: DangView,
     meta: {
+      requiresAuth: true,
       title: 'DANG Tool Assembly Generator',
+    },
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: AboutView,
+    meta: {
+      title: 'About Tooling Hero',
     },
   },
   {
@@ -55,26 +66,27 @@ const routes = [
   },
 ]
 
+// Initialize Vue Router
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(), // works with custom domains like app.toolinghero.us
   routes,
 })
 
-// Optional: Scroll to top after navigation
+// Optional: Scroll to top on route change
 router.afterEach(() => {
   window.scrollTo(0, 0)
 })
 
-// Optional: Guard logic (extend as needed)
+// Auth Guard Logic
 router.beforeEach((to, from, next) => {
-  const user = JSON.parse(localStorage.getItem('authUser') || 'null') // or Firebase check
+  const user = JSON.parse(localStorage.getItem('authUser') || 'null')
 
   if (to.meta.requiresAuth && !user) {
-    return next('/') // redirect unauthenticated
+    return next('/') // Unauthenticated – send to home
   }
 
   if (to.meta.requiresAdmin && user?.role !== 'admin') {
-    return next('/dashboard') // redirect non-admins
+    return next('/dashboard') // Not admin – fallback
   }
 
   next()
