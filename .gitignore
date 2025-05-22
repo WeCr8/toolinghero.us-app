@@ -163,4 +163,7 @@ coverage
 
 logs/
 tests_output/
->>>>>>> 2d6c6b4ced892e38f8a3a490c3beb6712200c196
+
+
+# Ignore environment type definitions
+env.d.ts
