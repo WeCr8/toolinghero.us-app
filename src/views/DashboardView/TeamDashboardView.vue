@@ -83,12 +83,3 @@ onMounted(async () => {
   }
 })
 </script>
-
-<style scoped>
-.btn-primary {
-  @apply bg-blue-600 text-white px-5 py-2 rounded font-semibold hover:bg-blue-700 transition;
-}
-.btn-secondary {
-  @apply bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-100 px-4 py-2 rounded font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition;
-}
-</style>
