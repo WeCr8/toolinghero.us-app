@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 // Direct imports for primary views
-import HomeView from '@/views/HomeView.vue'
+import HomeView from '@/views/core/HomeView.vue'
 
 // Lazy loaded views
-const DangView = () => import('@/views/DangView.vue')
-const AboutView = () => import('@/views/AboutView.vue')
+const DangView = () => import('@/views/DangView/DangView.vue')
+const AboutView = () => import('@/views/core/AboutView.vue')
 const PersonalDashboard = () => import('@/views/DashboardView/PersonalDashboard.vue')
 const TeamDashboard = () => import('@/views/DashboardView/TeamDashboard.vue')
 const SupportView = () => import('@/views/SupportView.vue')

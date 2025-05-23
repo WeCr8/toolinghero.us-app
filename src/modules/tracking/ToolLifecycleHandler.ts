@@ -1,5 +1,5 @@
-import { useDarnLogger } from './useDarnLogger'
-import { useAllTrackers } from './useTrackingHooks'
+import { useDarnLogger } from '.modules/tracking/useDarnLogger'
+import { useAllTrackers } from '.modules/tracking/useTrackingHooks'
 
 export function handleToolLifecycle(toolId: string) {
   const { addLog } = useDarnLogger()

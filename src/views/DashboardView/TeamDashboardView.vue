@@ -4,9 +4,7 @@
     <div class="flex items-center justify-between">
       <div>
         <h1 class="text-3xl font-bold text-gray-900 dark:text-white">🛠 Team Dashboard</h1>
-        <p class="text-sm text-gray-500 dark:text-gray-300">
-          Welcome, {{ user?.email || 'User' }}
-        </p>
+        <p class="text-sm text-gray-500 dark:text-gray-300">Welcome, {{ user?.email || 'User' }}</p>
       </div>
       <div v-if="isAdmin" class="text-sm text-green-600 font-semibold">Admin Mode</div>
     </div>
