@@ -33,7 +33,9 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { APP_VERSION } from '@/constants/appVersion'
+// import { APP_VERSION } from '@/constants/appVersion'
+
+const APP_VERSION = '1.3.7'
 
 const isSynced = ref(true)
 const activeSuite = 'Tooling Hero' // 🔁 Update dynamically via store later
