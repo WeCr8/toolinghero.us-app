@@ -6,8 +6,8 @@ import HomeView from '@/views/HomeView.vue'
 // Lazy load non-critical views
 const DangView = () => import('@/views/DangView.vue')
 const AboutView = () => import('@/views/AboutView.vue')
-const PersonalDashboard = () => import('@/views/dashboard/PersonalDashboard.vue')
-const TeamDashboard = () => import('@/views/dashboard/TeamDashboard.vue')
+const PersonalDashboard = () => import('@/views/DashboardView/PersonalDashboard.vue')
+const TeamDashboard = () => import('@/views/DashboardView/TeamDashboard.vue')
 const NotFoundView = () => import('@/views/NotFound.vue')
 
 // Authenticated app routes

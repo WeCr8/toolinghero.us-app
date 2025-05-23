@@ -1,0 +1,1 @@
+// Utility for description generation

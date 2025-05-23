@@ -20,7 +20,7 @@
     <div class="flex items-center gap-2 sm:gap-4">
       <!-- Navigation Buttons -->
       <router-link
-        to="/dang"
+        to="/DangView"
         class="text-sm px-3 py-2 hover:bg-blue-100 dark:hover:bg-gray-700 rounded hidden sm:inline"
       >
         ⚙️ DANG
