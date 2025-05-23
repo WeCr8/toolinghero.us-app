@@ -1,0 +1,1 @@
+<template><div>Upload Receipt for Auto-Parsing</div></template>

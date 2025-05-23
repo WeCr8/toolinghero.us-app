@@ -1,0 +1,1 @@
+<template><div>Photo Upload & AI Recognition</div></template>

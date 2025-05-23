@@ -1,14 +1,15 @@
+//app.vue
 <template>
-  <MainContentContainer />
+  <DefaultLayout>
+    <router-view />
+  </DefaultLayout>
   <ModalManager />
 </template>
 
 <script setup lang="ts">
-import MainContentContainer from '@/layouts/MainContentContainer.vue'
-//import ModalManager from '@/modals/manager/ModalManager.vue'
-//import { provideModalManager } from '@/modals/manager/useModalManager'
-
-// ✅ Modal system injection
-//provideModalManager()
+import DefaultLayout from '@/layouts/DefaultLayout.vue'
+import ModalManager from '@/modals/manager/ModalManager.vue'
+// If you're using a global modal system:
+// import { provideModalManager } from '@/modals/manager/useModalManager'
+// provideModalManager()
 </script>
-<style lang="postcss" scoped></style>

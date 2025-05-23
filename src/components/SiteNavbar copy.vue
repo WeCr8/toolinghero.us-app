@@ -1,3 +1,4 @@
+//SiteNavbar.vue
 <template>
   <nav
     class="bg-white dark:bg-gray-900 shadow-md flex items-center justify-between px-4 py-2 fixed top-0 inset-x-0 z-50"

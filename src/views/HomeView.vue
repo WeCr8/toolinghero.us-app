@@ -1,3 +1,4 @@
+//Homeiew.vue
 <template>
   <section class="pt-24 pb-12 px-6 sm:px-12 bg-white dark:bg-gray-900 min-h-screen fade-in">
     <div class="max-w-7xl mx-auto">

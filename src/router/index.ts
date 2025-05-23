@@ -1,23 +1,24 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-// Direct import for critical home route
+// Core app views
 import HomeView from '@/views/HomeView.vue'
 
-// Lazy loaded routes for optimized build
+// Lazy load non-critical views
 const DangView = () => import('@/views/DangView.vue')
 const AboutView = () => import('@/views/AboutView.vue')
 const PersonalDashboard = () => import('@/views/dashboard/PersonalDashboard.vue')
 const TeamDashboard = () => import('@/views/dashboard/TeamDashboard.vue')
 const NotFoundView = () => import('@/views/NotFound.vue')
 
-// All app routes
+// Authenticated app routes
 const routes = [
   {
     path: '/',
     name: 'Home',
     component: HomeView,
     meta: {
-      title: 'Tooling Hero – Home',
+      requiresAuth: true,
+      title: 'Tooling Hero – Modules',
     },
   },
   {
@@ -66,30 +67,38 @@ const routes = [
   },
 ]
 
-// Initialize Vue Router
 const router = createRouter({
-  history: createWebHistory(), // works with custom domains like app.toolinghero.us
+  history: createWebHistory(),
   routes,
 })
 
-// Optional: Scroll to top on route change
+// Scroll to top on navigation
 router.afterEach(() => {
   window.scrollTo(0, 0)
 })
 
-// Auth Guard Logic
+// Auth guard
 router.beforeEach((to, from, next) => {
   const user = JSON.parse(localStorage.getItem('authUser') || 'null')
 
   if (to.meta.requiresAuth && !user) {
-    return next('/') // Unauthenticated – send to home
+    return next('/about') // Redirect unauthenticated users to info
   }
 
   if (to.meta.requiresAdmin && user?.role !== 'admin') {
-    return next('/dashboard') // Not admin – fallback
+    return next('/dashboard') // Redirect unauthorized to personal dash
   }
 
   next()
 })
 
 export default router
+export { routes } // Export routes for use in other parts of the app
+export type { RouteRecordRaw } from 'vue-router'
+export type { RouteLocationNormalized } from 'vue-router'
+export type { RouteRecordName } from 'vue-router'
+export type { RouteLocationRaw } from 'vue-router'
+export type { RouteLocation } from 'vue-router'
+export type { RouteRecord } from 'vue-router'
+export type { RouteRecordRedirect } from 'vue-router'
+export type { RouteRecordRedirectOption } from 'vue-router'
