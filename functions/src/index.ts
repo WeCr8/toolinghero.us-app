@@ -6,17 +6,17 @@
  * For more info, see: https://firebase.google.com/docs/functions/typescript
  */
 
-import { onRequest } from 'firebase-functions/v2/https'
-import * as logger from 'firebase-functions/logger'
+import {onRequest} from "firebase-functions/v2/https";
+import * as logger from "firebase-functions/logger";
 
 // 🔔 Stripe webhook handler for billing events
-export { onStripeWebhook } from './onStripeWebhook'
+export {onStripeWebhook} from "./onStripeWebhook";
 
 // 👤 Auth trigger – sets up user and default team on signup
-export { onUserCreate } from './onUserCreate'
+export {onUserCreate} from "./onUserCreate";
 
 // 🛠️ Tool creation – logs tool creation into DARN logs
-export { onToolAdd } from './onToolAdd'
+export {onToolAdd} from "./onToolAdd";
 
 // 📌 NOTE: Utility functions like assignModulesByPlan are imported where used, not exported here
 

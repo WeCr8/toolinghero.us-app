@@ -2,7 +2,7 @@
   "name": "toolinghero-functions",
   "description": "Firebase Functions for Tooling Hero",
   "engines": {
-    "node": "18"
+    "node": "24"
   },
   "main": "lib/index.js",
   "scripts": {
