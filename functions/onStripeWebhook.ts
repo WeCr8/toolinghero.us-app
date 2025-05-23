@@ -20,7 +20,8 @@ export const onStripeWebhook = functions.https.onRequest(async (req, res) => {
 
   if (!sig) {
     console.error('Missing Stripe signature header')
-    return res.status(400).send('Missing Stripe signature header')
+    res.status(400).send('Missing Stripe signature header')
+    return
   }
 
   try {
@@ -30,7 +31,8 @@ export const onStripeWebhook = functions.https.onRequest(async (req, res) => {
     event = stripe.webhooks.constructEvent(rawBody, sig as string, endpointSecret)
   } catch (err: any) {
     console.error('⚠️ Webhook signature verification failed.', err?.message || err)
-    return res.status(400).send(`Webhook Error: ${err?.message || err}`)
+    res.status(400).send(`Webhook Error: ${err?.message || err}`)
+    return
   }
 
   // Handle checkout and subscription update events
@@ -54,6 +56,10 @@ async function handleSubscriptionUpdate(data: any) {
   try {
     const customerId = data.customer
     const planId = data.items?.data?.[0]?.price?.id || 'free'
+    const status = data.status || null
+    const currentPeriodEnd = data.current_period_end
+    const cancelAtPeriodEnd = data.cancel_at_period_end || false
+    const subscriptionId = data.id || null
 
     const userSnap = await db
       .collection('users')
@@ -83,6 +89,14 @@ async function handleSubscriptionUpdate(data: any) {
     await userRef.update({
       plan: newPlan,
       modules,
+      stripe: {
+        subscriptionId,
+        planId,
+        status,
+        currentPeriodEnd,
+        cancelAtPeriodEnd,
+        lastUpdated: admin.firestore.FieldValue.serverTimestamp(),
+      },
     })
 
     console.log(`Updated user ${userDoc.id} with plan ${newPlan}`)

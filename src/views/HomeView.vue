@@ -1,4 +1,5 @@
 //Homeiew.vue
+<!-- views/HomeView.vue -->
 <template>
   <section class="pt-24 pb-12 px-6 sm:px-12 bg-white dark:bg-gray-900 min-h-screen fade-in">
     <div class="max-w-7xl mx-auto">
@@ -38,11 +39,11 @@
           route="/import"
         />
         <ModuleCard
+          v-if="user?.role === 'admin'"
           icon="🔐"
           title="Admin Settings"
           description="User roles, suites, billing, and API access (Enterprise only)."
           route="/settings"
-          v-if="user?.role === 'admin'"
         />
       </div>
     </div>
@@ -53,30 +54,38 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import ModuleCard from '@/components/dashboard/ModuleCard.vue'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
+import { doc, getDoc, getFirestore } from 'firebase/firestore'
 
+// Define a refined AppUser structure
 interface AppUser {
   uid: string
   email: string
-  role?: string // Extend this if you load roles from Firestore
+  role: string
 }
 
 const user = ref<AppUser | null>(null)
-let unsubscribe: (() => void) | null = null
+const unsubscribe = ref<(() => void) | null>(null)
 
-onMounted(() => {
+onMounted(async () => {
   const auth = getAuth()
-  unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
+  const db = getFirestore()
+
+  unsubscribe.value = onAuthStateChanged(auth, async (firebaseUser) => {
     if (firebaseUser) {
+      const userDocRef = doc(db, 'users', firebaseUser.uid)
+      const userSnap = await getDoc(userDocRef)
+      const data = userSnap.data()
+
       user.value = {
         uid: firebaseUser.uid,
         email: firebaseUser.email ?? '',
-        // Optionally merge Firestore profile here
+        role: data?.role ?? 'viewer',
       }
     }
   })
 })
 
 onUnmounted(() => {
-  unsubscribe?.()
+  unsubscribe.value?.()
 })
 </script>
